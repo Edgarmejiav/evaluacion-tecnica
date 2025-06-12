@@ -1,6 +1,10 @@
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImxlZ2EiLCJzdWIiOiI2ODRhNDY3MDA3YjljMWEzOWUxYzRjZDQiLCJpYXQiOjE3NDk3MDM0NDEsImV4cCI6MTc0OTcwNzA0MX0.cPwoFDCRYAP9LTf1D2lO26CYTF6VWiK6rG3lpyG0Ri4
+
+
 ### Create Task
 POST http://localhost:3000/tasks
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
   "title": "Implement Task Filters",
@@ -12,19 +16,21 @@ Content-Type: application/json
 
 ### filter Tasks by Status and Priority
 GET http://localhost:3000/tasks/filter?status=IN_PROGRESS&priority=
-
-
-
+Authorization: Bearer {{token}}
 
 ### Get All Tasks
 GET http://localhost:3000/tasks
+Authorization: Bearer {{token}}
+
 
 ### Get One Task
 GET http://localhost:3000/tasks/684a16a3d75e77134536fefa
+Authorization: Bearer {{token}}
 
 ### Update Task
 PATCH http://localhost:3000/tasks/684a16a3d75e77134536fefa
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
   "status": "IN_PROGRESS",
@@ -33,3 +39,4 @@ Content-Type: application/json
 
 ### Delete Task
 DELETE http://localhost:3000/tasks/684a1906db5cc62dc3798914
+Authorization: Bearer {{token}}

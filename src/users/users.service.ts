@@ -28,6 +28,10 @@ export class UsersService {
     }
   }
 
+  async findByUsername(username: string): Promise<UserDocument | null> {
+    return this.userModel.findOne({ username }).exec();
+  }
+
   async findAll(): Promise<UserResponseDto[]> {
     const users = await this.userModel.find();
     return plainToInstance(UserResponseDto, users, {
@@ -36,7 +40,7 @@ export class UsersService {
   }
 
   async findOne(id: string): Promise<UserResponseDto> {
-    const user = await this.userModel.findById(id).exec();
+    const user = await this.userModel.findById(id);
     if (!user) throw new NotFoundException();
     return plainToInstance(UserResponseDto, user, {
       excludeExtraneousValues: true,
