@@ -23,7 +23,7 @@ services:
     container_name: task-backend
     build: .
     ports:
-      - "4000:3000"
+      - "5000:3000"
     depends_on:
       - mongo
     networks:
