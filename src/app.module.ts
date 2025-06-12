@@ -11,22 +11,18 @@ import * as path from 'node:path'; // Importa path
 @Module({
   imports: [
     ConfigModule.forRoot({
-      isGlobal: true, // Hace que ConfigService esté disponible globalmente
+      isGlobal: true,
       envFilePath: path.resolve(
         __dirname,
         `../.env.${process.env.NODE_ENV || 'development'}`,
       ),
-      // Si NODE_ENV no está definido, por defecto buscará '.env.development'
     }),
     MongooseModule.forRootAsync({
-      imports: [ConfigModule], // Importa ConfigModule para que ConfigService esté disponible
+      imports: [ConfigModule],
       useFactory: async (configService: ConfigService) => ({
-        uri: configService.get<string>('MONGO_URI'), // Obtiene MONGO_URI de ConfigService
-        // Puedes añadir más opciones de Mongoose aquí si las necesitas
-        // useNewUrlParser: true,
-        // useUnifiedTopology: true,
+        uri: configService.get<string>('MONGO_URI'),
       }),
-      inject: [ConfigService], // Indica que ConfigService debe ser inyectado
+      inject: [ConfigService],
     }),
     TasksModule,
     UsersModule,
