@@ -1,0 +1,28 @@
+### Create user
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "username": "juan",
+  "password": "juan",
+  "email": "juan@juan.com",
+  "fullName": "juan Mejía Vásquez"
+}
+
+### Get all users
+GET http://localhost:3000/users
+
+### Get user by ID
+GET http://localhost:3000/users/684a46c85ceed1090cc2fef5
+
+### Update user
+PATCH http://localhost:3000/users/684a46c85ceed1090cc2fef5
+Content-Type: application/json
+
+{
+  "email": "newemail@example.com",
+  "fullName": "Edgar M. Vásquez"
+}
+
+### Delete user
+DELETE http://localhost:3000/users/684a46c85ceed1090cc2fef5
