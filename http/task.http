@@ -1,0 +1,30 @@
+### Create Task
+POST http://localhost:3000/tasks
+Content-Type: application/json
+
+{
+  "title": "Implement Task Filters",
+  "description": "Add filtering by status and priority",
+  "status": "OPEN",
+  "dueDate": "2025-06-15T00:00:00.000Z",
+  "priority": 2
+}
+
+
+### Get All Tasks
+GET http://localhost:3000/tasks
+
+### Get One Task
+GET http://localhost:3000/tasks/684a16a3d75e77134536fefa
+
+### Update Task
+PATCH http://localhost:3000/tasks/684a16a3d75e77134536fefa
+Content-Type: application/json
+
+{
+  "status": "IN_PROGRESS",
+  "priority": 2
+}
+
+### Delete Task
+DELETE http://localhost:3000/tasks/684a1906db5cc62dc3798914
