@@ -4,7 +4,7 @@
 
 ### 📁 Módulos principales
 
-- [ ] Auth (registro / login con JWT)
+- [x] Auth (registro / login con JWT)
 - [x] Tasks (CRUD + filtros + validaciones)
 
 ### 🗃️ Base de Datos
