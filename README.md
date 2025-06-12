@@ -1,10 +1,21 @@
+# 🚀 Levantamiento del Proyecto
+
+1. **Opción 1: Usar Docker:**
+   ```bash
+   docker compose up --build
+    ```
+2. Opción 2: Ejecutar localmente:
+   ```bash
+   npm run start:dev
+   ```
+
 # 📝 Task Manager App - Plan de Trabajo
 
 ## 🔧 Backend (NestJS + TypeScript + MongoDB)
 
 ### 📁 Módulos principales
 
-- [ ] Auth (registro / login con JWT)
+- [x] Auth (registro / login con JWT)
 - [x] Tasks (CRUD + filtros + validaciones)
 
 ### 🗃️ Base de Datos
@@ -20,7 +31,7 @@
 - [x] Actualizar tareas
 - [x] Eliminar tareas
 - [ ] Paginación (opcional)
-- [ ] Drag & Drop prioridades (opcional)
+- [x] Drag & Drop prioridades (opcional)
 - [x] Manejo de errores
 
 ### 🧪 Pruebas
@@ -34,8 +45,8 @@
 - [ ] Formulario de login y registro
 - [ ] Lista de tareas con filtros y paginación
 - [ ] UI para crear/editar tareas
-- [ ] Indicadores de loading / errores
-- [ ] Drag & drop para prioridades (opcional)
+- [x] Indicadores de loading / errores
+- [x] Drag & drop para prioridades (opcional)
 
 ---
 
@@ -53,4 +64,4 @@
 
 - [x] Aplicación corriendo localmente (demo)
 - [x] Documentación clara
-- [ ] Presentación de 10-15 minutos
+- [x] Presentación de 10-15 minutos
