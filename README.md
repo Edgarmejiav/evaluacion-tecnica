@@ -4,7 +4,7 @@
 
 ### 📁 Módulos principales
 
-- [x] Auth (registro / login con JWT)
+- [ ] Auth (registro / login con JWT)
 - [x] Tasks (CRUD + filtros + validaciones)
 
 ### 🗃️ Base de Datos
@@ -45,12 +45,12 @@
 - [x] ESLint configurado
 - [x] README con instrucciones
 - [x] Git con commits descriptivos
-- [ ] Dockerfile (opcional)
+- [x] Dockerfile (opcional)
 
 ---
 
 ## 📊 Presentación Final
 
-- [ ] Aplicación corriendo localmente (demo)
-- [ ] Documentación clara
+- [x] Aplicación corriendo localmente (demo)
+- [x] Documentación clara
 - [ ] Presentación de 10-15 minutos
