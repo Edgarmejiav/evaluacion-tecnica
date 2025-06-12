@@ -6,7 +6,7 @@ import {
 } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { Task, TaskDocument } from './task.schema';
+import { Task, TaskDocument, TaskStatus } from './task.schema';
 import { CreateTaskDto } from './dto/create-task.dto';
 
 @Injectable()
@@ -64,6 +64,20 @@ export class TasksService {
       }
     } catch {
       throw new BadRequestException('Invalid task ID');
+    }
+  }
+
+  async findFiltered(status?: TaskStatus, priority?: number) {
+    try {
+      const filter: {
+        status?: TaskStatus;
+        priority?: number;
+      } = {};
+      if (status) filter.status = status;
+      if (priority !== undefined) filter.priority = priority;
+      return await this.taskModel.find(filter);
+    } catch (error) {
+      throw new InternalServerErrorException('Error filtering tasks');
     }
   }
 }

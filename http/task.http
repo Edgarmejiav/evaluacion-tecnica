@@ -10,6 +10,11 @@ Content-Type: application/json
   "priority": 2
 }
 
+### filter Tasks by Status and Priority
+GET http://localhost:3000/tasks/filter?status=IN_PROGRESS&priority=
+
+
+
 
 ### Get All Tasks
 GET http://localhost:3000/tasks

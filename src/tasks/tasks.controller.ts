@@ -6,9 +6,10 @@ import {
   Param,
   Patch,
   Post,
+  Query,
 } from '@nestjs/common';
 import { TasksService } from './tasks.service';
-import { Task } from './task.schema';
+import { Task, TaskStatus } from './task.schema';
 import { CreateTaskDto } from './dto/create-task.dto';
 
 @Controller('tasks')
@@ -23,6 +24,17 @@ export class TasksController {
   @Get()
   findAll() {
     return this.tasksService.findAll();
+  }
+
+  @Get('filter')
+  findFiltered(
+    @Query('status') status: TaskStatus,
+    @Query('priority') priority: number,
+  ) {
+    return this.tasksService.findFiltered(
+      status,
+      priority ? +priority : undefined,
+    );
   }
 
   @Get(':id')
