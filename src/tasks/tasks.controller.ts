@@ -12,7 +12,7 @@ import {
 import { TasksService } from './tasks.service';
 import { Task, TaskStatus } from './task.schema';
 import { CreateTaskDto } from './dto/create-task.dto';
-import { JwtAuthGuard } from '../auth/jwt-auth.guard';
+import { JwtAuthGuard } from '../common/guards/jwt-auth.guard';
 
 @UseGuards(JwtAuthGuard)
 @Controller('tasks')
