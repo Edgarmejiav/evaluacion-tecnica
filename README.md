@@ -1,4 +1,14 @@
+# 📝 Task api
+
 # 🚀 Levantamiento del Proyecto
+
+## 💠 Variables de Entorno
+
+Crea un archivo `.env` basado en `.env.example`:
+
+```bash
+cp .env.example .env
+```
 
 1. **Opción 1: Usar Docker:**
    ```bash
@@ -6,10 +16,9 @@
     ```
 2. Opción 2: Ejecutar localmente:
    ```bash
+   npm install
    npm run start:dev
    ```
-
-# 📝 Task Manager App - Plan de Trabajo
 
 ## 🔧 Backend (NestJS + TypeScript + MongoDB)
 
