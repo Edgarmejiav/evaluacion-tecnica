@@ -12,7 +12,9 @@ import { UsersService } from './users.service';
 import { User } from './users.schema';
 import { CreateUserDto } from './dto/create-user.dto';
 import { JwtAuthGuard } from '../common/guards/jwt-auth.guard';
+import { ApiBearerAuth } from '@nestjs/swagger';
 
+@ApiBearerAuth('jwt-auth')
 @UseGuards(JwtAuthGuard)
 @Controller('users')
 export class UsersController {

@@ -1,34 +1,33 @@
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imp1YW4iLCJzdWIiOiI2ODRhNWRlNTUzYjg0YTUyYzNlZmIzY2QiLCJpYXQiOjE3NDk3MDc0NjMsImV4cCI6MTc0OTcxMTA2M30.mejVlkx1cfRkLEVwln2KaX0aRX-JiuKTdIX94NGcCTU
-
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imp1YW4iLCJzdWIiOiI2ODRhN2EwMGJkZjc3YTNiZmY1MTUyYjkiLCJpYXQiOjE3NDk3Mzk0OTgsImV4cCI6MTc0OTc0MzA5OH0.DD_DDwX_AopVx5wAgu_ynw72Ul6RNyEiO7En5gqDoyc
 
 ### Create Task
-POST http://localhost:3000/tasks
+POST http://moon:5000/tasks
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
-  "title": "Implement Task Filters",
+  "title": "  Filters",
   "description": "Add filtering by status and priority",
   "status": "OPEN",
   "dueDate": "2025-06-15T00:00:00.000Z",
-  "priority": 2
+  "priority": 1
 }
 
 ### filter Tasks by Status and Priority
-GET http://localhost:3000/tasks/filter?status=IN_PROGRESS&priority=
+GET http://moon:5000/tasks/filter?status=IN_PROGRESS&priority=
 Authorization: Bearer {{token}}
 
 ### Get All Tasks
-GET http://localhost:3000/tasks
+GET http://moon:5000/tasks
 Authorization: Bearer {{token}}
 
 
 ### Get One Task
-GET http://localhost:3000/tasks/684a16a3d75e77134536fefa
+GET http://moon:5000/tasks/684a16a3d75e77134536fefa
 Authorization: Bearer {{token}}
 
 ### Update Task
-PATCH http://localhost:3000/tasks/684a16a3d75e77134536fefa
+PATCH http://moon:5000/tasks/684a7a3abdf77a3bff5152c3
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
@@ -38,5 +37,5 @@ Authorization: Bearer {{token}}
 }
 
 ### Delete Task
-DELETE http://localhost:3000/tasks/684a1906db5cc62dc3798914
+DELETE http://moon:5000/tasks/684a1906db5cc62dc3798914
 Authorization: Bearer {{token}}
