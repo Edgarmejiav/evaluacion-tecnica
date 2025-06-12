@@ -3,6 +3,17 @@ POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-  "username": "lega",
-  "password": "lega"
+  "username": "juan",
+  "password": "juan"
+}
+
+### Create user
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "username": "juan",
+  "password": "juan",
+  "email": "juan@juan.com",
+  "fullName": "juan Mejía Vásquez"
 }
